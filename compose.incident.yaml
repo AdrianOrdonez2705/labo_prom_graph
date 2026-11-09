@@ -1,0 +1,4 @@
+# La imagen 1.1.0 incluye un defecto intencional, visible como 503 y latencia.
+services:
+  api:
+    image: tsi-ec3-api:1.1

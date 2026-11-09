@@ -1,0 +1,17 @@
+texto,categoria
+servidor no responde es una emergencia,critico
+sistema caido todos los usuarios afectados,critico
+error grave servicio indisponible,critico
+base de datos sin acceso urgente,critico
+interrupcion de red operacion detenida,critico
+aplicacion no carga y hay bloqueo,critico
+acceso al sistema falla inmediatamente,critico
+caida de servicio bloquea ventas,critico
+consulta sobre horario de soporte,normal
+solicitud de cambio de color del boton,normal
+pregunta por documentacion del sistema,normal
+reunion para revisar mejoras de interfaz,normal
+solicitar manual de usuario actualizado,normal
+agregar campo opcional al formulario,normal
+consulta de reporte semanal,normal
+mejora estetica para el proximo mes,normal

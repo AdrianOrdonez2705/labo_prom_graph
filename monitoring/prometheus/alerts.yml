@@ -1,0 +1,18 @@
+groups:
+  - name: tsi_ec3
+    rules:
+      - alert: TSI_API_Alta_Tasa_Errores
+        expr: (sum(rate(tsi_http_requests_total{path="/predict",status=~"5.."}[1m])) / clamp_min(sum(rate(tsi_http_requests_total{path="/predict"}[1m])), 0.0001)) > 0.15
+        for: 0s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Más del 15% de respuestas 5xx en /predict (ventana 1m)"
+          description: "Solo laboratorio: no envía notificaciones externas."
+      - alert: TSI_API_Latencia_Alta
+        expr: histogram_quantile(0.95, sum(rate(tsi_http_request_duration_seconds_bucket{path="/predict"}[1m])) by (le)) > 0.4
+        for: 0s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Latencia p95 mayor a 400 ms (ventana 1m)"
