@@ -1,9 +1,19 @@
 # LAB EC3 - Informe individual
 
-**Estudiante:** [nombre y código]  **Fecha:** [fecha]
+**Estudiante:** Adrian Gonzales Ferreira, Adrián Fabricio Ordóñez Paredes  **Fecha:** 09/11/2026
 
 ## 1. Arquitectura y relación con Proxmox
-Explique en 120–160 palabras las capas hardware / Proxmox / VM Linux / Docker / API / observabilidad.
+Hardware: Constituye la base física (servidor con CPU, memoria RAM, discos y tarjetas de red).
+
+Proxmox: Hipervisor de tipo 1 instalado directamente en el hardware para gestionar y virtualizar recursos.
+
+VM Linux: Máquina virtual con un sistema operativo Linux independiente que garantiza aislamiento y seguridad.
+
+Docker: Motor de contenedores dentro de la VM Linux que empaqueta dependencias de forma ligera y eficiente.
+
+API: Aplicación o servicio backend alojado dentro del contenedor Docker que expone funcionalidades mediante HTTP o gRPC.
+
+Observabilidad: Capa transversal que rastrea métricas, registros y trazas de las capas anteriores para auditar salud, rendimiento y comportamiento en tiempo real.
 
 ## 2. Pre-flight
 - Docker version / Compose version: 
@@ -37,3 +47,5 @@ Impacto, detección, causa probable, mitigación, prevención; separar hechos de
 
 ## 8. Referencias y uso de IA
 Fuentes, prompts, decisiones verificadas y responsabilidad individual.
+
+> **NOTE**: Las imágenes se encuentran en el documento PDF evidencias/informe_gonzales_ordonez.pdf
